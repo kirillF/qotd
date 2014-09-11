@@ -3,15 +3,19 @@ package qotd
 class QouteController {
     def scaffold = true
 
+    def index() {
+    }
+
+    def qouteService
+
     def random = {
-        def allQuotes = Qoute.list()
-        def randomQuote
-        if (allQuotes.size() > 0) {
-            def index = new Random().nextInt(allQuotes.size())
-            randomQuote = allQuotes[index]
-        } else {
-            randomQuote = new Qoute(author: "Anonymous", content: "Real Programmers don't eat much quiche")
-        }
-        [quote: randomQuote]
+        def randomQoute = qouteService.getRandomQuote()
+        [quote: randomQoute]
+    }
+
+    def ajaxRandom = {
+        def randomQoute = qouteService.getRandomQuote()
+        render "<q>${randomQoute.content}</q>" +
+                "<p>${randomQoute.author}</p>"
     }
 }
