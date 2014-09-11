@@ -1,10 +1,7 @@
 package qotd
 
 class QouteController {
-
-    def index() {
-        redirect(action: random)
-    }
+    def scaffold = true
 
     def random = {
         def allQuotes = Qoute.list()

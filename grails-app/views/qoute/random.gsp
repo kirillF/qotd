@@ -6,7 +6,7 @@
 <body>
     <div id="quote">
         <q>${quote.content}</q>
-        <q>${quote.author}</q>
+        <p>${quote.author}</p>
     </div>
 </body>
 </html>
