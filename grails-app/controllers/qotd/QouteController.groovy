@@ -7,8 +7,7 @@ class QouteController {
     }
 
     def random = {
-        def staticAuthor = "Anonymous"
-        def staticContent = "Real Programmers don't eat much quiche"
-        [ author: staticAuthor, content: staticContent ]
+        def staticQoute = new Qoute(author: "Anonymous", content: "Real Programmers don't eat much quiche")
+        [quote: staticQoute]
     }
 }

@@ -5,8 +5,8 @@
 
 <body>
     <div id="qoute">
-	<q>${content}</q>
-	<q>${author}</q>
+	<q>${quote.content}</q>
+	<q>${quote.author}</q>
     </div>
 </body>
 </html>
