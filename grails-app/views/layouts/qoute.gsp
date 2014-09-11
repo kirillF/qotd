@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="
 	    <g:createLinkTo dir='css' file='snazzy.css' />
 	    " />
-	<g:layouthead />
+	<g:layoutHead />
     </head>
     <body>
 	<div id="header">
